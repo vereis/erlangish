@@ -1,5 +1,5 @@
 {application, erlangish,
- [{description, "An OTP application"},
+ [{description, "Compiler for Erlang-ish syntax on the web"},
   {vsn, "0.1.0"},
   {registered, []},
   {mod, { erlangish_app, []}},
