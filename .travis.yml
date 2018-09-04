@@ -5,7 +5,7 @@ otp_release:
     - 20.2
     - 20.1
     - 20.0
-script: "make test"
+script: "make test_travis"
 notifications:
     recepients:
         - me@cbailey.co.uk
