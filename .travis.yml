@@ -1,0 +1,7 @@
+language: erlang
+otp_release:
+    - 21.0
+script: "make test_travis"
+notifications:
+    recepients:
+        - me@cbailey.co.uk
