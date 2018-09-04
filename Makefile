@@ -13,7 +13,10 @@ SHELL = /bin/bash
 
 release: app escript
 
-test: dialyzer eunit ct
+test: dialyzer elvis eunit ct
+
+test_travis: dialyzer elvis eunit
+	$(REBAR) ct --readable=false
 
 clean:
 	$(REBAR) clean
