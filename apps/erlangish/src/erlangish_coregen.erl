@@ -38,4 +38,4 @@ compile(ErlangSource, core_erlang) ->
 compile(ErlangSource, core_erlang_ast) ->
     {ok, Binary} = compile(ErlangSource, core_erlang),
     {ok, Tokens, _} = core_scan:string(binary_to_list(Binary)),
-    {ok, _Ast} = core_parse:parse(Tokens). 
+    {ok, _Ast} = core_parse:parse(Tokens).
