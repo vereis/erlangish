@@ -1,3 +1,8 @@
+%%%
+%%% Interface and light wrapper around 'compile', 'core_scan'
+%%% and 'core_parse' to generate core_erlang_asts and/or
+%%% core_erlang from given erlang source inputs.
+%%%
 -module(erlangish_coregen).
 
 -export([
