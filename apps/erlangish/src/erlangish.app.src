@@ -5,7 +5,10 @@
   {mod, { erlangish_app, []}},
   {applications,
    [kernel,
-    stdlib
+    stdlib,
+    jsx,
+    lager,
+    getopt
    ]},
   {env,[]},
   {modules, []},
