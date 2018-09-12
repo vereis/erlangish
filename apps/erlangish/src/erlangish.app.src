@@ -1,6 +1,6 @@
 {application, erlangish,
  [{description, "Compiler for Erlang-ish syntax on the web"},
-  {vsn, "0.1.0"},
+  {vsn, "0.0.1"},
   {registered, []},
   {mod, { erlangish_app, []}},
   {applications,
@@ -14,6 +14,6 @@
   {modules, []},
 
   {maintainers, []},
-  {licenses, ["Apache 2.0"]},
+  {licenses, ["MIT"]},
   {links, []}
  ]}.

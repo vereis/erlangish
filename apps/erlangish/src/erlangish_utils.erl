@@ -1,5 +1,7 @@
 -module(erlangish_utils).
 
+-vsn({0, 0, 1}).
+
 -export([
     wildcard/1
 ]).

@@ -5,6 +5,8 @@
 %%%
 -module(erlangish_coregen).
 
+-vsn({0, 0, 1}).
+
 -export([
     compile/1,
     compile/2

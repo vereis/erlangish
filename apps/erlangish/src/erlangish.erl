@@ -1,5 +1,7 @@
 -module(erlangish).
 
+-vsn({0, 0, 1}).
+
 -export([
     main/1,
 
