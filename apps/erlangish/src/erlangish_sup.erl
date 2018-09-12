@@ -5,6 +5,8 @@
 
 -module(erlangish_sup).
 
+-vsn({0, 0, 1}).
+
 -behaviour(supervisor).
 
 %% API

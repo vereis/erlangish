@@ -1,5 +1,7 @@
 -module(erlangish_app).
 
+-vsn({0, 0, 1}).
+
 -behaviour(application).
 
 -export([start/2, stop/1]).
