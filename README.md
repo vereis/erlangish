@@ -1,4 +1,4 @@
-# Erlangish
+# Erlangish [![Build Status](https://travis-ci.org/Vereis/erlangish.svg?branch=master)](https://travis-ci.org/Vereis/erlangish)
 Erlangish is a compiler which produces ES6 JavaScript from sequential Erlang source code -- we aim to bring Erlang's terse, clear and powerful syntax to the web.
 
 ## Overview
