@@ -1,15 +1,15 @@
 {"1.1.0",
 [{<<"getopt">>,
-  {git,"git@github.com:jcomellas/getopt.git",
+  {git,"https://github.com/jcomellas/getopt",
        {ref,"fbd210550677114a6c96cdf66e340eb248908d93"}},
   0},
  {<<"goldrush">>,{pkg,<<"goldrush">>,<<"0.1.9">>},1},
  {<<"jsx">>,
-  {git,"git@github.com:talentdeficit/jsx.git",
+  {git,"https://github.com/talentdeficit/jsx",
        {ref,"3074d4865b3385a050badf7828ad31490d860df5"}},
   0},
  {<<"lager">>,
-  {git,"git@github.com:erlang-lager/lager.git",
+  {git,"https://github.com/erlang-lager/lager",
        {ref,"1249ede5bebfa8e23d281c0da602f479b9a6c66f"}},
   0}]}.
 [
