@@ -1,5 +1,7 @@
 -module(erlangish_mock_io).
 
+-vsn({0, 0, 1}).
+
 -export([
     start_link/0,
     init/0,
