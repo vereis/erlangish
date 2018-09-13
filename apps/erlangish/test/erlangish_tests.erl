@@ -1,11 +1,23 @@
 -module(erlangish_tests).
 -include_lib("eunit/include/eunit.hrl").
 
-help_test() ->
-    ?assertThrow({early_return, help}, erlangish:help()).
+setup() ->
+    {ok, _} = application:ensure_all_started(erlangish).
 
-version_test() ->
-    ?assertThrow({early_return, version}, erlangish:version()).
+teardown(_) ->
+    ok = application:stop(erlangish).
+
+help_version_test_() ->
+    {setup,
+     fun setup/0,
+     fun teardown/1,
+     [{"Help test",
+       fun() -> ?assertThrow({early_return, help}, erlangish:help())
+       end},
+      {"Version test",
+       fun() -> ?assertThrow({early_return, version}, erlangish:version())
+       end}
+     ]}.
 
 main_test_() ->
     [

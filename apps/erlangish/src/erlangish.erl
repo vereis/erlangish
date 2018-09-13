@@ -30,6 +30,7 @@
                             | {ok,  early_return, atom()}
                             | {err, any()}.
 main(Args) ->
+    {ok, _Deps} = application:ensure_all_started(erlangish),
     try
         case getopt:parse(?OPTS, Args) of
             {ok, {ParsedArgs, ArgTokens}} ->
@@ -53,7 +54,7 @@ main(Args) ->
         {early_return, Fn} ->
             {ok, early_return, Fn};
         T:E ->
-            io:format("Error: ~p:~p~n", [T, E]),
+            io:format(standard_error, "Error: ~p:~p~n", [T, E]),
             {err, {T, E}}
     end.
 
@@ -75,16 +76,16 @@ compile(Files, WorkerCount) when is_integer(WorkerCount) ->
               end, #{}, Jobs),
 
     lists:foreach(fun({Worker, AllocatedJobs}) ->
-        io:format("Worker_~p jobs: ~p~n", [Worker, AllocatedJobs])
+        io:format(standard_error, "Worker_~p jobs: ~p~n", [Worker, AllocatedJobs])
     end, maps:to_list(Workers)),
     ok.
 
 -spec help() -> no_return().
 help() ->
-    getopt:usage(?OPTS, ?MODULE_STRING, "[file ...]"),
+    getopt:usage(?OPTS, ?MODULE_STRING, "[file ...]", standard_error),
     throw({early_return, help}).
 
 -spec version() -> no_return().
 version() ->
-    io:format("~s version: ~s~n", [?MODULE_STRING, ?VSN]),
+    io:format(standard_error, "~s version: ~s~n", [?MODULE_STRING, ?VSN]),
     throw({early_return, version}).
