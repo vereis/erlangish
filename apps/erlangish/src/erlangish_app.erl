@@ -7,6 +7,7 @@
 -export([start/2, stop/1]).
 
 start(_StartType, _StartArgs) ->
+    erlangish_utils:init_io_server(),
     erlangish_sup:start_link().
 
 stop(_State) ->
